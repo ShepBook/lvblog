@@ -6,3 +6,5 @@ The following directories and their contents are Copyright Jared Koumentis. If y
 
 * _posts/
 * images/
+
+The rest is under MIT license.
