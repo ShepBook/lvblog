@@ -1,0 +1,53 @@
+body {
+  background-color: #010001;
+  color: #dddddd;
+  font-family: georgia;
+  font-size: 12pt;
+  line-height: 120%
+  }
+
+h1 {
+  color: #53A7CA;
+  font-family: courier new;
+  font-size: 28pt;
+  }
+
+h2 {
+  color: #53A7CA;
+  font-family: georgia;
+  font-size: 28pt;
+  }
+
+h3 { 
+  color: #53A7CA;
+  font-family: georgia;
+  font-size: 15pt;
+  }
+
+h4 { 
+  color: #53A7CA;
+  font-family: georgia;
+  margin: 10 0 10 0;
+  font-size: 12pt;
+  }
+
+a {
+  color: #009966;
+  }
+
+a:visited {
+  color: #009966;
+  }
+
+a:active {
+  color: #009966;
+  }
+
+a:hover {
+  color: #009966;
+  }
+
+p {
+  margin-left: 15px;
+  }
+

@@ -1,0 +1,10 @@
+---
+layout: post
+title: Some test page cause I need one.
+---
+
+h1. {{ page.title }}
+
+p(meta). 13 Mar 2012 - Jared Koumentis
+
+This is a test of the broadcasting system of this blog.
