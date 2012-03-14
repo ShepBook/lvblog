@@ -1,0 +1,12 @@
+---
+layout: post
+title: A New Home
+---
+
+h2. {{ page.title }}
+
+<p class="meta"> 13 Mar 2012 - Jared Koumentis </p>
+
+Finally, a blog! I hope to amuse and enlighten you with my writings. No guarantees though. Feel free to keep an eye on things. Improvements will happen on the fly. I test on prod. :P
+
+- ShepBook
