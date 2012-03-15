@@ -207,5 +207,23 @@ ul.posts {
     margin-bottom: 1em;
     color: #009966;
   }
+
+/*****************************************************************************/
+/*
+/* WebFont Stuff
+/*
+/*****************************************************************************/
+
+@font-face {
+  font-family: 'Voces';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Voces'), local('Voces-Regular'), url('http://themes.googleusercontent.com/static/fonts/voces/v1/ePr7eRI28zZaOtQ8CcT7rA.woff') format('woff');
+}
   
-  
+@font-face {
+  font-family: 'Baumans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Baumans'), local('Baumans-Regular'), url('http://themes.googleusercontent.com/static/fonts/baumans/v2/3DEdKAl82M5rDSLBVcU5jA.woff') format('woff');
+}
