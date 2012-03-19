@@ -1,0 +1,24 @@
+---
+layout: post
+title: The Art of the Critique
+---
+
+h2. {{ page.title }}
+
+<p class="meta"> 18 Mar 2012 - Jared Koumentis </p>
+
+I've been working to publish my first "official" article. It's "official" in that it is meant for my company's blog of sorts. Having my article edited by someone else was an interesting experience. It's the first time I've had this done. One thing I noticed was a difference in editing styles.
+
+The person who did most of the editing primarily just went about correcting all my little typos and such. That was awesome. Occasionally I would be asked what I meant about something and would be asked for clarification. This was quite awesome as well.
+
+Then there were the people who didn't do so much editing as they did critiquing. Mind you, I'm cool with critiquing, even if I don't agree with the critic's opinion. One thing I noticed was how different critique could feel, even when the critique carried the same underlying message.
+
+When you critique someone's work, you have options. One way to do it is to say how you disagree with a point and then share what you believe or think to be the correct point. This goes something like, "No, I don't agree. In fact, I think this is wrong." and then state your opinion that goes against the original point. While this may fulfill the critic's desire to critique the work and share a dissenting opinion or point, it doesn't actually help the writer of the original piece. The writer probably spent a fair bit of time writing out whatever you've just critiqued. If you just dissent and never help the writer understand why you are dissenting, how is that helpful? Obviously, you are attempting to share your thoughts with the writer and the whole objective of editing is to create a better end product. So, how was your critique supposed to help the writer produce a better piece?
+
+Another way to critique and dispute a point is to provide the writer with some new information or understanding that he may not have had before. Let's say you're critiquing an article and you bring up a point you disagree with, to the writer. Perhaps it goes something like this, "I don't agree with this particular part here... Let me explain why..." and then share with the writer your reasons for considering it wrong. Yes, this takes more time and effort than simply saying, "I don't agree. Here's my opinion instead." however, the outcome is far more positive.
+
+In my experience, the first editor, doing all the corrections and requests for clarification was simply awesome. There wasn't much of any input on the content matter, but that's ok. I didn't expect that person to do so. The second and third editors are where I noticed the biggest difference in effectiveness. The second editor simple left me frustrated and perhaps even a bit intimidated. I didn't know what to think or do after discussing about the article. I literally hit a mental block. Then, I talked with the third editor who explained things completely differently. Even though the third editor agreed with the second editor, the way the point was approached was completely different. The fact that there was a detailed and significant explaination for the "why" of the dissenting opinion made the critique successful. When I was finished discussing the article with the third editor, I felt great. My mental block had cleared, I understood "why", and I even learned a good bit. That evening, after talking with the third editor, I did a massive rewrite of my article. I trimmed out unessential bits and completely rewrote the controversial portion. In fact, with what I learned from the discussion with the third editor, I changed my stance significantly. The third editor's critique genuinely opened my mind to a different way of thinking.
+
+In the end, this is simply one example from my one experience about editorial critique. Take it or leave it. I do think it outlines some good points, particularly for those who edit the articles of an introvert (like myself). Primarily, if you disagree with a point, don't just say you disagree and state your opinion. Give a good reason why you disagree. Explain it in detail. Chances are, the person who wrote the article came to the opinion they did after significant thought and hard work. They are going to want a good reason why you disagree with their writing. Give it to them. They still may not agree with your critique, but I guarantee you that they will have more respect for you. In the end, building the best piece possible is the whole point of the editorial process. Keep this in mind and you too can give good, helpful critique.
+
+- ShepBook
