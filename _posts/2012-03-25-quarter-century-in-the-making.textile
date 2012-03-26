@@ -1,0 +1,51 @@
+---
+layout: post
+title: Quarter Century in the Making
+---
+
+h2. {{ page.title }}
+
+<p class="meta"> 25 Mar 2012 - Jared Koumentis </p>
+
+Today, as of 7:12pm, I'm officially a quarter of a century old. 
+
+That makes me feel... old.
+
+I estimate that about one-third of my useful life is gone, never to be seen again. While it's true that I may indeed live to be older than 75, I don't expect to be terribly productive at that age.
+
+All of this is rather depressing, to be honest. So, I'm going to try to focus on some positive things that have happened since the last time I visited this square on my calendar.
+
+h3. Good things that occurred during my 24th year of life:
+
+
+* I married the love of my life.
+* I switched from focusing on nursing to pursuing my passion of computer systems administration (and, coming soon, programming).
+* I attended my first tech conference. (Surge 2011)
+* I've met some amazing people, whom I consider mentors.
+* I've learned a great deal about businesses and startups.
+
+All these things are pretty cool, however, looking forward I see some things I need to improve upon.
+
+For example, I've come to the realization that being a systems administrator (or "site reliability engineer", if you prefer the "fancy" title) simply isn't going to be enough. This is my reason for studying programming. My future depends on being more than just a systems administrator. On the other hand, being just a developer wouldn't cut it either. The lines between systems operations and software development become fuzzier each day. I believe that sysadmins and devs have to make a choice. This choice separates the merely mediocre from the exceptional. What is this choice? Simple.
+
+h3. Specialization or Generalization
+
+You must choose to specialize or generalize. If you're a sysadmin, to specialize would mean to delve deeper into the systems you work with and integrate new ones as you find them useful. If you're a developer, to specialize would mean compiling an ever larger understanding of the languages you work with each day. As new languages appear, you'll integrate them into your arsenal.
+
+However, to specialize is to destroy your future. While the above examples of specialization may at first glance appear to be broad in spectrum (learning and integrating new systems or languages), their scope is self-limiting. You can only be so broad of a sysadmin or developer.
+
+h3. To generalize is to thrive.
+
+You can choose to specialize and become the best developer or sysadmin you can. However, such a choice will never approach exceptional. The master generalist, what I call a "Full Stack Technologist" (FST), is the future. The FST is a proficient software engineer. The FST is an exceptional systems administrator. I consider the optimal balance between software engineering and systems administration for an FST to be ~40/60. This doesn't mean the FST is half-assing it in either category. It means that the FST is has a deeper understanding of systems than programming. FSTs are capable of writing production level code, however, their greatest strengths are in debugging. FSTs don't specialize in programming, so they may never deliver code so beautiful that it brings tears to your eyes, however, given the choice of having either a "Beautiful Code Programmer" or a "Full Stack Technologist" design and write a piece of software for me, I would choose the FST every time. Every. Single. Time. No exceptions.
+
+Why? A Full Stack Technologist is the ultimate generalist. The FST sees and understands all. From the high-level code to the bare metal and everything in between. When things go wrong, this is the person you want at the helm. Better yet, when you prefer things to go right from the start, this is the person you *need* at the helm.
+
+Do these Full Stack Technologists exist? Yes, though I know of very few. Am I a Full Stack Technologist? Not yet. However, this is my goal. Do I expect to be a Full Stack Technologist by this time next year? Hell no. I do, however, expect myself to have made significant progress toward this goal by this time next year. I have some personal goals that I intend on reaching, and in order to give myself the best chance of achieving them, I don't intend on talking much about them. While I can't top every item on my list from this year (you can only marry the love of your life once), I do intend on expanding upon that list and having plenty more to show off next year.
+
+Feel free to join me in this pursuit. Otherwise, stay tuned.
+
+- ShepBook
+
+
+
+(P.S. If you want to be a Full Stack Technologist, please, for your own sake, stop calling yourself a "DevOp". It will only hold you back and you sound rather moronic... "Hi! I'm a DevOp!")
