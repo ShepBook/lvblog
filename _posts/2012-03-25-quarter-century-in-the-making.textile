@@ -44,8 +44,6 @@ Do these Full Stack Technologists exist? Yes, though I know of very few. Am I a 
 
 Feel free to join me in this pursuit. Otherwise, stay tuned.
 
-- ShepBook
+*- ShepBook*
 
-
-
-(P.S. If you want to be a Full Stack Technologist, please, for your own sake, stop calling yourself a "DevOp". It will only hold you back and you sound rather moronic... "Hi! I'm a DevOp!")
+* (P.S. If you want to be a Full Stack Technologist, please, for your own sake, stop calling yourself a "DevOp". It will only hold you back and you sound rather moronic... "Hi! I'm a DevOp!")

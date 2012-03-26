@@ -9,4 +9,4 @@ h2. {{ page.title }}
 
 Finally, a blog! I hope to amuse and enlighten you with my writings. No guarantees though. Feel free to keep an eye on things. Improvements will happen on the fly. I test on prod. :P
 
-- ShepBook
+*- ShepBook*

@@ -47,4 +47,4 @@ Puppet seems great if you already know a lot of Puppet stuff or have the willpow
 
 Chef is the go to standard (or should be) of most sysadmins I meet everyday. It has struck a good balance of power and simplicity. If you're starting out, start here.
 
-- ShepBook
+*- ShepBook*
