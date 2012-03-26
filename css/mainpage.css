@@ -184,7 +184,8 @@ ul.posts {
 
   #post ul,
   #post ol {
-    margin-left: 1.35em;
+    margin-left: 2.5em;
+    margin-top: 1em;
   }
 
   #post code {
