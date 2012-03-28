@@ -1,0 +1,48 @@
+---
+layout: post
+title: Seeds Article for OmniTI: The Asymptote of DevOps Utopia
+---
+
+h2. {{ page.title }}
+
+<p class="meta"> 28 Mar 2012 - Jared Koumentis </p>
+
+It's been in the making for months now, but the time has finally come! My Seeds article is up at Omniti.com/Seeds. In order to avoid having a mess of links cluttering the article, I've created this post for all the wonderful and useful links to information for your own further personal enlightenment. The links are generally clustered by author/speaker/topic. Enjoy!
+
+*Adam Jacob*
+"Video on Operations":http://www.youtube.com/watch?v=xChUw0SOBt4
+"Video on Infrastructure as Code":http://www.youtube.com/watch?v=LKENuz-DKTg
+"Video on DevOps":http://www.youtube.com/watch?v=Fx8OBeNmaWw
+
+*Paul Graham*
+"Article on the Maker's Schedule":http://paulgraham.com/makersschedule.html
+
+*Theo Schlossnagle*
+"Video on Web Operations as a Career":http://www.youtube.com/watch?v=LAP1zaXUvAE
+
+*Thomas Limoncelli*
+"Video on Site Reliability Engineering":http://www.youtube.com/watch?v=iIuTnhdTzK0
+
+*Tom Preston-Werner*
+"Video on Optimizing for Happiness":http://www.justin.tv/startupschool/b/272031754
+"Article on Optimizing for Happiness":http://tom.preston-werner.com/2010/10/18/optimize-for-happiness.html
+
+*Zach Holman*
+"Series of Articles on How GitHub Works":http://zachholman.com/posts/how-github-works/
+
+*Other Related Topics and Talks*
+*Susan Cain:* "TED Talk on The Power of Introverts":http://www.youtube.com/watch?v=c0KYU2j0TM4
+*Shawn Achor:* "TED Talk on The Happy Secret to Better Work":http://www.youtube.com/watch?v=fLJsdqxnZb0
+*Jason Fried:* "TED Talk on Why Work Doesn't Happen at Work":http://www.youtube.com/watch?v=5XD2kNopsUs
+*Joel Spolsky:* "Joel Spolsky's Joel On Software Blog":http://joelonsoftware.com/
+
+*Good Books I'm Currently Reading or Have Recently Read*
+(These are links to Amazon for the Kindle version. Yes, if you buy them, I think I might get some pennies or something. Thanks in advance. :])
+<a href="http://www.amazon.com/gp/product/B004J4WNL2/ref=as_li_tf_tl?ie=UTF8&tag=shepscomm-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=B004J4WNL2">Quiet: The Power of Introverts in a World That Can't Stop Talking</a><img src="http://www.assoc-amazon.com/e/ir?t=shepscomm-20&l=as2&o=1&a=B004J4WNL2" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<a href="http://www.amazon.com/gp/product/B003F3PMYI/ref=as_li_tf_tl?ie=UTF8&tag=shepscomm-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=B003F3PMYI">The Happiness Advantage</a><img src="http://www.assoc-amazon.com/e/ir?t=shepscomm-20&l=as2&o=1&a=B003F3PMYI" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<a href="http://www.amazon.com/gp/product/B003ZK58TA/ref=as_li_tf_tl?ie=UTF8&tag=shepscomm-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=B003ZK58TA">Where Good Ideas Come From: The Natural History of Innovation</a><img src="http://www.assoc-amazon.com/e/ir?t=shepscomm-20&l=as2&o=1&a=B003ZK58TA" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+<a href="http://www.amazon.com/gp/product/B004P1JDJO/ref=as_li_tf_tl?ie=UTF8&tag=shepscomm-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=B004P1JDJO">Drive: The Surprising Truth About What Motivates Us</a><img src="http://www.assoc-amazon.com/e/ir?t=shepscomm-20&l=as2&o=1&a=B004P1JDJO" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+
+I hope that the above helps you in your own pursuits to better yourself.
+
+*- ShepBook*
