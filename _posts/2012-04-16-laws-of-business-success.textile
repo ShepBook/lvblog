@@ -1,0 +1,20 @@
+---
+layout: post
+title: The Laws of Business Success
+---
+
+h2. {{ page.title }}
+
+<p class="meta"> 16 Apr 2012 - Jared Koumentis </p>
+
+I came upon <a href="http://www.manager-tools.com/docs/Horstmans_Laws.pdf" target="_blank">Horstman's Laws</a>. Certainly worth a read.
+
+I was feeling artsy. This is what came out of it.
+
+<img src="http://www.liberumvir.com/images/laws-of-business-success.png" width="80%">
+
+I think the Laws apply to more than just management though. I believe they apply to all aspects of business success or even, perhaps, all of life. I've added a few things not in Horstman's Laws but I feel they also apply.
+
+So, what do you think? I hope you enjoyed.
+
+*- ShepBook*
