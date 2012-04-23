@@ -1,0 +1,76 @@
+---
+layout: post
+title: Your Text Editor Makes a Difference
+---
+
+h2. {{ page.title }}
+
+<p class="meta"> 22 Apr 2012 - Jared Koumentis </p>
+
+h3. "Hello... My name is Jared and I'm a recovering Modal Text Editor addict."
+
+I've used a fair number of text editors in my time, as I'm sure most technologists have. I started with Nano, as that was what Arch Linux examples suggested. As my workload requirements increased, it became clear that Nano wasn't going to cut it. To top it off, most of the systems I was working on did not include Nano. Hell, they didn't even include Vim. So, there I was, faced with Vi. I figured Vi/Vim were more common on these older Unix systems I was administrating, so I might as well learn it.
+
+Diving into Vim, I taught myself through various cheatsheets and tutorials I found online. I found it quite nice and it certainly helped my productivity. However, I still found myself longing for some kind of visual control options. I found my way to Gvim, of course. Gvim sated my desiire for some kind of visual control and there I stayed for quite a while. I still had to use Vi/Vim while on remote systems, of course. However, for working on my local files, I enjoyed the options available to me with Gvim.
+
+More recently, I've found myself working with code a lot while teaching myself Python and Ruby. Going from working with the occasional config file to working on multiple files for a code project shined some seriously bright light on the rough edges of my current editors. Even with Gvim and all it's advantages, I still found myself having to pay some attention to the editor. So, my search continued to find something that suited my new requirements. This led my to Gedit.
+
+I had heard of Gedit before, of course. I just had never given it much use. Basically, it is the Gnome equivalent to Kwrite. I had used both on occasion and found myself going back to them. Tabs for my files and easier management were significant advantages I found. Gedit definitely made my life easier. (Isn't that what software is supposed to do?) So, I customized my Gedit with a nice dark theme (similar to the one found for TextMate) and got to hacking on my code. Life was good.
+
+Now, as I wrote code more often, I began to think about some of the repetition issues. Mind you, Gedit does have an awesome snippets plugin (like many text editors) and I made significant use of it. However, there was some friction I noticed that I wished my editor could help me out with. For example, when I type in a left parenthesis, I want the matching right parenthesis to appear as well. The same goes for most of the oft used punctuation of code. Gedit did provide some indentation help, however, there was friction there too. It didn't autoindent when I typed out a block of code, like a for loop or something. I didn't think much of it, when I first started to learn programming. I would just tab things myself and move on. However, this little, tiny friction point eventually becomes noticably painful, kind of like getting a blister while hiking.
+
+So off I went, yet again, in search of a new editor. I knew I needed something that was more specifically targetted at writing code. Gvim and Gedit did alright, but they were, first and formost, simple, plain text editors. I looked at some development environments. While their features seemed to solve many of the pain points I experienced with the simple text editors, they introduced a massive amount of bloat that I knew I simply wouldn't be able to accept.
+
+Now, anyone who's written much of any Ruby code has probably heard about TextMate. Sounds pretty cool. Problem.. it is only for OSX. I certainly prefer running Linux Mint for my OS and intend on keeping it that way. So, TextMate is out. There are certainly many "tweaks" for Gedit, but it still didn't achieve the level of polish I hear about from those who use TextMate.
+
+Eventually my search lead me to Sublime Text 2. When I first read about it, I wrote it off. "There's no way it can be _that_ good. Besides, I really don't want to pay for a text editor. It certainly can't be worth the $59." So, back to Gedit for me, I thought. (I'll just ignore the pain.)
+
+So, I'm hacking away in Gedit on the Rails Tutorial I found. I come to chapter 3, I believe it was, and I notice this guy keeps pushing for Sublime Text. He keeps suggesting it, subtly but surely. I figure, if this guy is so good with Rails to have written an awesome tutorial, he probably knows what he's suggesting with Sublime Text. I guess it's worth checking out. I go download it and fire it up.
+
+At first glance, I find it's interface to be simple, clean, and yet still beautiful. The default color scheme is a sane, dark theme. Code colors and highlights are simple and clear. "Hmmm...", I think. "Let's give this a try." I start working my way through the tutorial again. That's when my jaw drops.
+
+Remember those parenthesis (or other paired punctuation)? Suddenly, they are created in pairs and my cursor placed between them! I start typing out my functions and it indents perfectly. It recognizes my statements and indents appropriately. I then decide to pause my study of the Tutorial and learn more about this Sublime Text 2.
+
+I start looking through the documentation, which is pretty dense. I decide, instead, to go find some reviews or suggested usage tips on the Intarwebs. Each thing I discover just adds more to the awesomeness I already know. Here, let me share a few things I love.
+
+h3. Simple Beauty
+
+I know "beauty is in the eye of the beholder" and I'm sure there are plenty of people who prefer light color schemes instead of the dark ones I prefer. Luckily, Sublime Text 2 has that too.
+
+h3. Really Fucking Fast
+
+Seriously. Opens practically instantly. I created a symlink (like "sudo ln -s /home/shepbook/Sublime\ Text\ 2/sublime_text /usr/bin/subl") and I can start it with my ALT+F2 run command option in Gnome, just by typing in "subl" (of course, one could do this from your terminal as well). Even better, I can open a folder in the same way, like "subl /path/to/folder" and Sublime Text opens it in the left side bar. Great for managing a large project. Oh, and did I mention that even this is really fast... like measured in milliseconds fast.
+
+h3. Magical "GoTo Anything" search
+
+Press CTRL+P and you get this handly little drop down box. Start typing and you can search for any file in your project. It searches for both filenames and complete paths. Then, once you find the file, you can type "@" and it give you a list of all the methods in the file. Need to jump to a line in that file? Some Vim awesomeness has carried over (since it was originally inspired by Vim)... just CTRL+P and then type ":" followed by the line number.
+
+h3. Sublime Package Control
+
+There's a thing called "Package Control" for Sublime Text and it makes installing plugins and extensions a piece of cake. CTRL+SHIFT+P drops down the "Command Palette". Type out what you want to do, say "install package" and press enter. It will then pop out a list of packages you can install, which you can text search through, of course.
+
+h3. Git Control
+
+There's a Git plugin, which you can install with the Package Control. This puppy lets you do all your favorite Git commands from within Sublime Text.
+
+h3. Many More Plugins
+
+There are lots more plugins, which warrent your looking through them. There's a linter, code completion, word highlights. If you use SFTP a lot, there is a plugin (though, not free) for managing that flawlessly.
+
+h3. Simple Configuration
+
+There are no crazy menus or configuration tools you have to nagivate through, in order to customize Sublime Text 2. Instead, everything is easily configured in simple text files. While some may not consider this "easier", it is simpler. Coming from an Arch Linux background, this style of configuration management is very, very much welcome.
+
+h3. Give It a Try. You Won't Regret It.
+
+Hopefully, this article has shown you some things that could make your life better, as well. I know there will be many people who simply don't want to use Sublime Text, for many different reasons. Top of the list seems to be 1) not open source 2) $59 license fee.
+
+I understand not liking it's closed source binary ways. This part also put me off. However, I'm not RMS. If something genuinely makes my life and work genuinely better, I'll give it a try. If you have political or ethical issues with this, I really can't help you there. The advantages I get out of Sublime Text 2 outweigh the disadvantage of it being closed source.
+
+The license fee also seems to put a lot of people off. I was one of those people too, at first... until I gave it a try. Sublime Text 2 offers a free evaluation period, without time or funtionatility limits on the program. The only difference between the unregistered or registered version is that when you save a file on the unregistered version, it will occasionally (rarely, even) pop up a little box and say something to the effect of "please buy a license if you like it". Honestly, my productivity is significantly improved by Sublime Text 2. I can easily justify paying the $59 license fee. The way I see it, if it saves me even one hour of collective time over the next year, it will have paid for itself, many times over. For me, my time is the most valuable thing I have. If I can spend less time working and do more in that time, then I can spend more time doing other things that matter more to me.
+
+Besides all the time I save by using it, it simply makes coding *better*. A friend asked me to explain what made Sublime Text 2 so much better or what about it makes me more productive. If the benefits above don't seem to justify it for you, just give it a try. You'll be glad you did.
+
+*- ShepBook*
+
+(I am not in any way associated with Sublime Text nor have I recieved any compensation from them.)
