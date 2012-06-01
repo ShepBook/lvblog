@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+<link rel="shortcut icon" href="/favicon.ico">
+  <meta http-equiv="content-type" context="text/html"; charset=utf-8" />
+  <title>State of the (Automation) Union</title>
+  <meta name="author" content="Jared Koumentis" />
+    
+  <!-- Homepage CSS -->
+  <link rel="stylesheet" href="/css/mainpage.css" type="text/css" />
+  
+  <!-- Google Analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30344765-1']);
+  _gaq.push(['_setDomainName', 'liberumvir.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+
+<div class="site">
+  <div class="title">
+    <a href="/">Shepherd Book's Commonplace</a>
+    <a class="extra" href="/">Home</a>
+  </div>
+  
+  <div id="post">
+<h2>State of the (Automation) Union</h2>
+<p class="meta"> 21 Mar 2012 &#8211; Jared Koumentis </p>
+<p>This past Tuesday (March 12th), I went to the DevOpsDC meetup. The topic was automation. They had someone from CFEngine and Canonical come in to present their automation toolsets. The organizers represented Chef and Puppet. The idea was a kind of &#8220;automation tool thunderdome&#8221;. While it wasn&#8217;t quite <em>that</em> exciting, I did learn a good bit. Here are my perceptions of the &#8220;contenders&#8221;.</p>
+<h3>CFEngine</h3>
+<p>There were a couple of CFEngine guys there. The one that did the presentation seemed like the seasoned sysadmin type. He told us about how CFEngine evolved, embracing theories and philosophies along the way to growing up. He offered a high level overview of how CFEngine works. This is where the presentation started to falter though. The attendees started to latch on to points of insecurity. Unfortunately, this threw the presenter off kilter to the point where he couldn&#8217;t even properly finish his presentation. I&#8217;m sure the attendees had legitimate concerns about security, but that would be something to bring up after the presentation, not during. It did seem to revolve around IP authentication which, if true, is horribly foolish. Unfortunately, the presentation degraded into pointlessness after miscommunication and an overwhelming sense of &#8220;tear the &#8216;expert&#8217; down&#8221; destroyed it.</p>
+<p>Unfortunately for CFEngine, that wasn&#8217;t so much what gave me a bad taste about it. What did it for me is when the talk, fairly early on, shifted from &#8220;technology and applied theories&#8221; to &#8220;Look at our big clients&#8221;. Whenever a product presentation starts resting on the laurels of its large clientele, instead of the power and superiority of its offering, I tend to tune out and discount it. Perhaps this is just a bias of mine. Sure, some really big banks and organizations use it extensively. That doesn&#8217;t mean I want to use it in my infrastructure. To its credit though, CFEngine is really fucking fast. It is written in C, requires no dependencies, and outshines all others I&#8217;ve seen, in speed. Unfortunately, speed isn&#8217;t everything and there were some security flaws brought up. Personally, I&#8217;ve moved on.</p>
+<h3>Juju</h3>
+<p>The guy from Canonical definitely had a west coast air about him. A sort of laid back, cocky, cool guy vibe. Totally fits in with my vision of Canonical. He was a developer on the Juju project, so he generally knew his project stuff well. The downside is that he was overwhelmingly a developer. Juju, and consequentially his presentation, is aimed at Ubuntu. Sorry, not just aimed at&#8230; but solely for Ubuntu. Of course, this immediately put off the ole&#8217; salty dogs of the Unixes past. Personally, I&#8217;ve got no problem with Ubuntu and, if given the choice of which OS is going on my server, it&#8217;s my go to distro. However, I know this made the presentation, from a really early point, completely unpalatable to a few attendees.</p>
+<p>About the technology side of things. Juju is a completely different take on the whole idea of automation. Really, it&#8217;s not about automation. It&#8217;s about orchestration. Not really system orchestration though, but service orchestration. Unfortunately, right now, it&#8217;s in its early stages. By early, I mean alpha-beta. Would I want it handling my production architecture? Hell no! Would I toy with it in a cluster of virtual machines? Sure, could be fun. Right now, Juju just needs to grow up. Maybe it will have something to show off in a few years. Currently, don&#8217;t waste your time.</p>
+<h3>Puppet</h3>
+<p>Puppet didn&#8217;t really receive a fair shake. Honestly, I didn&#8217;t really learn much about it and so, in the interest of fairness, I will not be passing a judgement on it. I know lots of people love it. I know plenty hate it. The overwhelming tone of the presentation did make me feel like it was painful, both the presentation and the use of puppet. Ultimately, I felt like the presenter was actually making a great case for&#8230;</p>
+<h3>Chef</h3>
+<p>Chef was the final presentation of the night. The presentation had a welcome depth to it, while still maintaining an &#8220;overview&#8221; feeling to it. My own personal experience with automation has been with Chef, so much of the presentation felt familiar to me.</p>
+<p>Chef has the good theory parts of CFEngine with some of the hackiness of Puppet, and a giant bucket of polish. While it is still new and growing, as the presenter pointed out, so much is available for you to do with Chef. The whole of the Ruby language is at your disposal.</p>
+<h3>Conclusions</h3>
+<p>As the presentations ended and the meetup came to a close, we were given a proverb that I hold as a tenant of the DevOps movement. &#8220;Use what works for you. If the tool fits the job well, you like using it, and it makes your life easier, then use it.&#8221; Really, this is all it comes down to, at the end of the night.</p>
+<p>My opinion, I&#8217;m rolling with Chef any time I need automation. That&#8217;s not to say I don&#8217;t recognize the others. It&#8217;s just what I prefer. Some things are worth pointing out though, about the others. Chef is where it is today, by standing on the shoulders of giants. CFEngine pushed the paradigms that we now see in both Chef and Puppet. Puppet surely influenced Chef, if with nothing but Ruby. Juju is playing it&#8217;s own game right now, and it will be interesting to see where it goes. I do believe that, if you couple Juju with something like the &#8220;platform as a service&#8221; (PaaS), then you will go far. It just isn&#8217;t meant for getting into the nitty gritty of a system. It&#8217;s much more high level and, really, it just wouldn&#8217;t be the right tool for that job.</p>
+<p>So, recap&#8230;</p>
+<p>CFEngine seems great if you have complete and perfect control of your network, you need many more servers (orders of magnitude more) than the average business, and you therefore need the shear speed of well-compiled C.</p>
+<p>Juju has too much growing up to do for me to take seriously, right now. It does, however, seem <em>really</em> good at standing up a local wikimedia install on your laptop. Then again, so are my shell scripts.</p>
+<p>Puppet seems great if you already know a lot of Puppet stuff or have the willpower to do the hacky work required.</p>
+<p>Chef is the go to standard (or should be) of most sysadmins I meet everyday. It has struck a good balance of power and simplicity. If you&#8217;re starting out, start here.</p>
+<p><strong>- ShepBook</strong></p>
+</div>
+
+<div id="related">
+  <h4>Other Posts</h4>
+  <ul class="posts">
+    
+      <li><span>13 May 2012</span> &raquo; <a href="/2012/05/13/theory-of-productive-spaces.html">A Theory of Productive Spaces</a></li>
+    
+      <li><span>22 Apr 2012</span> &raquo; <a href="/2012/04/22/your-text-editor-makes-a-difference.html">Your Text Editor Makes a Difference</a></li>
+    
+      <li><span>16 Apr 2012</span> &raquo; <a href="/2012/04/16/laws-of-business-success.html">The Laws of Business Success</a></li>
+    
+  </ul>
+</div>
+
+  
+  <div class="footer">
+    <div class="contact">
+      <p>
+        Jared Koumentis | <a href="http://feeds.feedburner.com/shepbookscommonplace">RSS Feed</a> <br />
+        Author of <a href="http://www.liberumvir.com/">this blog</a> and <a href="http://www.thenoteplace.com/" target="_blank">TheNotePlace.com</a>
+      </p>
+    </div>
+    <div class="contact">
+      <p>
+        <a href="http://github.com/ShepBook/" target="_blank">Fork me on GitHub @ShepBook</a><br />
+        <a href="http://twitter.com/shepbook/" target="_blank">Follow me on Twitter @ShepBook</a><br />
+      </p>
+    </div>
+  </div>
+</div>
+
+<a href="http://github.com/ShepBook" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+</body>
+</html>

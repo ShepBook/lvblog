@@ -1,0 +1,10 @@
+h1. This is the data for my blog
+
+h1. License
+
+The following directories and their contents are Copyright Jared Koumentis. If you wish to use any data within them, get in touch first.
+
+* _posts/
+* images/
+
+The rest is under MIT license.
