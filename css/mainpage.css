@@ -219,12 +219,12 @@ ul.posts {
   font-family: 'Voces';
   font-style: normal;
   font-weight: 400;
-  src: local('Voces'), local('Voces-Regular'), url('http://themes.googleusercontent.com/static/fonts/voces/v1/ePr7eRI28zZaOtQ8CcT7rA.woff') format('woff');
+  src: local('Voces'), local('Voces-Regular'), url('/fonts/voces.woff') format('woff');
 }
   
 @font-face {
   font-family: 'Baumans';
   font-style: normal;
   font-weight: 400;
-  src: local('Baumans'), local('Baumans-Regular'), url('http://themes.googleusercontent.com/static/fonts/baumans/v2/3DEdKAl82M5rDSLBVcU5jA.woff') format('woff');
+  src: local('Baumans'), local('Baumans-Regular'), url('/fonts/baumans.woff') format('woff');
 }
