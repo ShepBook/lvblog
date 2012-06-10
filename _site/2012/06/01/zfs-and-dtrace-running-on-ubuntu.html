@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+<link rel="shortcut icon" href="/favicon.ico">
+  <meta http-equiv="content-type" context="text/html"; charset=utf-8" />
+  <title>ZFS and DTrace running on Ubuntu Linux</title>
+  <meta name="author" content="Jared Koumentis" />
+    
+  <!-- Homepage CSS -->
+  <link rel="stylesheet" href="/css/mainpage.css" type="text/css" />
+  
+  <!-- Google Analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30344765-1']);
+  _gaq.push(['_setDomainName', 'liberumvir.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+
+<div class="site">
+  <div class="title">
+    <a href="/">Shepherd Book's Commonplace</a>
+    <a class="extra" href="/">Home</a>
+  </div>
+  
+  <div id="post">
+<h2><span class="caps">ZFS</span> and DTrace running on Ubuntu Linux</h2>
+<p class="meta"> 1 Jun 2012 &#8211; Jared Koumentis </p>
+<p><strong><span class="caps">ZFS</span> and DTrace</strong></p>
+<p>These two technologies are the main thing I hear when I ask people &#8220;Why do you stay with a solaris-like operating system, instead of moving to Linux?&#8221; Hell, these two technologies were the reason why the company I work for spent several months building their own solaris-like distro based on the Illumos kernel.</p>
+<p>Of course, I have my own opinions on these technologies. <span class="caps">ZFS</span> is certainly handy. Compared to other filesystem or filesystem management software, it does make things easy. For DTrace, I have an issue with the steep learning curve. The ability to instrument in real time with lowered probe effect is pretty cool though. Personally, I do not think that these two technologies are worth staying with or moving to a solaris-like OS. Primarily, this opinion comes down to community. You could pile all the communities together (Illumos, OpenIndiana, SmartOS, OmniOS) and you still wouldn&#8217;t approach the same level of community found in any of the major Linux distros. Need a distro designed to remove pain from the administration of your computers? Ubuntu. Need extensive documentation on everything you can imagine? Arch Linux. Need a great desktop distribution? Linux Mint. I could go on and on. Simply put, the community behind Linux is many times greater than that behind the solaris-like distros.</p>
+<p>So, I had heard about <span class="caps">ZFS</span> and DTrace running on Linux. People have been working on them for years. Basically, since the time the technologies came out on Solaris. So, I decided to follow up on these ports and see what could be done. Luckily, I had great success in getting both to run on an Ubuntu server of mine. If you would like to do so as well, just follow the steps below.</p>
+<h3>Firstly, <span class="caps">ZFS</span></h3>
+<p><strong>1)</strong> Install an Ubuntu server. (I recommend trying it out on a VM first.)</p>
+<p><strong>2)</strong> Attach 2 drives to use for testing <span class="caps">ZFS</span>. (Again, I was using a VM, so this was as simple as &#8220;attaching&#8221; two more virtual hard drives.)</p>
+<p><strong>3)</strong> Partition the new drives. I used cfdisk on my two newly attached drives. If you aren&#8217;t sure of which /dev/sdx device the new drives attached as, just &#8220;cat /proc/partitions&#8221; and you should find it.</p>
+<p><strong>4)</strong> Do a &#8220;sudo apt-get update &amp;&amp; sudo apt-get upgrade&#8221; to make sure your system is up to date.</p>
+<p><strong>5)</strong> Install the needed prerequisites with &#8220;sudo apt-get install python-software-properties bison flex build-essential libelf-dev zlib1g-dev libc6-dev-i386 libdwarf-dev binutils-dev&#8221;</p>
+<p><strong>6)</strong> Add the zfs-native apt repo with &#8220;sudo add-apt-repository ppa:zfs-native/stable&#8221;</p>
+<p><strong>7)</strong> Update apt with the new sources from the zfs repo with &#8220;sudo apt-get update&#8221;.</p>
+<p><strong>8)</strong> Install ubuntu-zfs with &#8220;sudo apt-get install ubuntu-zfs&#8221;</p>
+<p><strong>9)</strong> Create your new zpool with &#8220;sudo zpool create zfs-blog raidz /dev/sdb1 /dev/sdc1&#8221;. Here, &#8220;zpool create&#8221; is given the name for the pool &#8220;zfs-blog&#8221; and told to use &#8220;raidz&#8221; (which will mirror, in this example) and then told to use the two disks we attached and partitioned earlier &#8220;/dev/sdb1 /dev/sdc1&#8221;.</p>
+<p><strong>10)</strong> Check out your new zpool with &#8220;sudo zpool status&#8221;</p>
+<p><strong>11)</strong> Check out your zfs-blog dataset with &#8220;sudo zfs list&#8221;</p>
+<p><strong>12)</strong> See that it is listed with &#8220;df -h&#8221;</p>
+<p><strong>13)</strong> Enjoy <span class="caps">ZFS</span> running on your Ubuntu server.</p>
+<h3>Then, DTrace</h3>
+<p><strong>1)</strong> Install git with &#8220;sudo apt-get install git&#8221;</p>
+<p><strong>2)</strong> Either make a git directory and move into it for you to keep your git stuff together or move to the directory you already use.</p>
+<p><strong>3)</strong> Clone my fork of the dtrace4linux repo with &#8220;git clone git://github.com/ShepBook/dtrace-for-linux.git&#8221;</p>
+<p><strong>4)</strong> Move into the dtrace-for-linux directory with &#8220;cd dtrace-for-linux&#8221;</p>
+<p><strong>5)</strong> Run &#8220;sudo make all&#8221; to build dtrace-for-linux.</p>
+<p><strong>6)</strong> If you would like to install dtrace into /usr/sbin/dtrace (The solaris-style location for this tool) then do &#8220;sudo make install&#8221;</p>
+<p><strong>7)</strong> To load the DTrace kernel module, do &#8220;sudo make load&#8221;</p>
+<p><strong>8)</strong> Enjoy DTrace running on your Ubuntu server.</p>
+<h3>Some side notes</h3>
+<p>I used Ubuntu 12.04 <span class="caps">LTS</span> for this setup. I ran it in Virtualbox for Linux. I forked the &#8220;dtrace4linux&#8221; repo to make this easier and to be able to base my instructions on a set point in its development. I have been able to play around with <span class="caps">ZFS</span> and it seems fully functional. I am not well versed in DTrace, so I can&#8217;t really tell you how well it is or is not working. I was able to run some one liners just fine, however, I&#8217;m sure there are differences between the probes on Linux and the probes on a solaris-like system. If you were well versed in DTrace on solaris-like systems, then I expect that you will be able to work with and/or figure out how to make DTrace work on Linux just as well.</p>
+<p>Hopefully, with the ability to run <span class="caps">ZFS</span> and DTrace on Ubuntu Linux, the people who have been holding back from moving to Linux from a solaris-like operating system can be convinced to join the wonderful community surrounding Linux. I, for one, welcome the solaris converts with open arms.</p>
+<p><strong>- ShepBook</strong></p>
+<p>Further Reading and Sources:<br />
+Thanks for Darik on Slashdot for recommending these links:<br />
+<a href="http://zfsonlinux.com/"><span class="caps">ZFS</span> on Linux Homepage</a><br />
+<a href="https://launchpad.net/~zfs-native/+archive/stable"><span class="caps">ZFS</span> on Linux Launchpad</a><br />
+<a href="http://hub.opensolaris.org/bin/view/Community+Group+zfs/whatis"><span class="caps">ZFS</span> Introduction</a></p>
+</div>
+
+<div id="related">
+  <h4>Other Posts</h4>
+  <ul class="posts">
+    
+      <li><span>13 May 2012</span> &raquo; <a href="/2012/05/13/theory-of-productive-spaces.html">A Theory of Productive Spaces</a></li>
+    
+      <li><span>22 Apr 2012</span> &raquo; <a href="/2012/04/22/your-text-editor-makes-a-difference.html">Your Text Editor Makes a Difference</a></li>
+    
+      <li><span>16 Apr 2012</span> &raquo; <a href="/2012/04/16/laws-of-business-success.html">The Laws of Business Success</a></li>
+    
+  </ul>
+</div>
+
+  
+  <div class="footer">
+    <div class="contact">
+      <p>
+        Jared Koumentis | <a href="http://feeds.feedburner.com/shepbookscommonplace">RSS Feed</a> <br />
+        Author of <a href="http://www.liberumvir.com/">this blog</a> and <a href="http://www.thenoteplace.com/" target="_blank">TheNotePlace.com</a>
+      </p>
+    </div>
+    <div class="contact">
+      <p>
+        <a href="http://github.com/ShepBook/" target="_blank">Fork me on GitHub @ShepBook</a><br />
+        <a href="http://twitter.com/shepbook/" target="_blank">Follow me on Twitter @ShepBook</a><br />
+      </p>
+    </div>
+  </div>
+</div>
+
+<a href="http://github.com/ShepBook" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+</body>
+</html>

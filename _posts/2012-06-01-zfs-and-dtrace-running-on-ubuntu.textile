@@ -1,0 +1,76 @@
+---
+layout: post
+title: ZFS and DTrace running on Ubuntu Linux
+---
+
+h2. {{ page.title }}
+
+<p class="meta"> 1 Jun 2012 - Jared Koumentis </p>
+
+*ZFS and DTrace*
+
+These two technologies are the main thing I hear when I ask people "Why do you stay with a solaris-like operating system, instead of moving to Linux?" Hell, these two technologies were the reason why the company I work for spent several months building their own solaris-like distro based on the Illumos kernel.
+
+Of course, I have my own opinions on these technologies. ZFS is certainly handy. Compared to other filesystem or filesystem management software, it does make things easy. For DTrace, I have an issue with the steep learning curve. The ability to instrument in real time with lowered probe effect is pretty cool though. Personally, I do not think that these two technologies are worth staying with or moving to a solaris-like OS. Primarily, this opinion comes down to community. You could pile all the communities together (Illumos, OpenIndiana, SmartOS, OmniOS) and you still wouldn't approach the same level of community found in any of the major Linux distros. Need a distro designed to remove pain from the administration of your computers? Ubuntu. Need extensive documentation on everything you can imagine? Arch Linux. Need a great desktop distribution? Linux Mint. I could go on and on. Simply put, the community behind Linux is many times greater than that behind the solaris-like distros.
+
+So, I had heard about ZFS and DTrace running on Linux. People have been working on them for years. Basically, since the time the technologies came out on Solaris. So, I decided to follow up on these ports and see what could be done. Luckily, I had great success in getting both to run on an Ubuntu server of mine. If you would like to do so as well, just follow the steps below.
+
+h3. Firstly, ZFS
+
+*1)* Install an Ubuntu server. (I recommend trying it out on a VM first.)
+
+*2)* Attach 2 drives to use for testing ZFS. (Again, I was using a VM, so this was as simple as "attaching" two more virtual hard drives.)
+
+*3)* Partition the new drives. I used cfdisk on my two newly attached drives. If you aren't sure of which /dev/sdx device the new drives attached as, just "cat /proc/partitions" and you should find it.
+
+*4)* Do a "sudo apt-get update && sudo apt-get upgrade" to make sure your system is up to date.
+
+*5)* Install the needed prerequisites with "sudo apt-get install python-software-properties bison flex build-essential libelf-dev zlib1g-dev libc6-dev-i386 libdwarf-dev binutils-dev"
+
+*6)* Add the zfs-native apt repo with "sudo add-apt-repository ppa:zfs-native/stable"
+
+*7)* Update apt with the new sources from the zfs repo with "sudo apt-get update".
+
+*8)* Install ubuntu-zfs with "sudo apt-get install ubuntu-zfs"
+
+*9)* Create your new zpool with "sudo zpool create zfs-blog raidz /dev/sdb1 /dev/sdc1". Here, "zpool create" is given the name for the pool "zfs-blog" and told to use "raidz" (which will mirror, in this example) and then told to use the two disks we attached and partitioned earlier "/dev/sdb1 /dev/sdc1".
+
+*10)* Check out your new zpool with "sudo zpool status"
+
+*11)* Check out your zfs-blog dataset with "sudo zfs list"
+
+*12)* See that it is listed with "df -h"
+
+*13)* Enjoy ZFS running on your Ubuntu server.
+
+h3. Then, DTrace
+
+*1)* Install git with "sudo apt-get install git"
+
+*2)* Either make a git directory and move into it for you to keep your git stuff together or move to the directory you already use.
+
+*3)* Clone my fork of the dtrace4linux repo with "git clone git://github.com/ShepBook/dtrace-for-linux.git"
+
+*4)* Move into the dtrace-for-linux directory with "cd dtrace-for-linux"
+
+*5)* Run "sudo make all" to build dtrace-for-linux.
+
+*6)* If you would like to install dtrace into /usr/sbin/dtrace (The solaris-style location for this tool) then do "sudo make install"
+
+*7)* To load the DTrace kernel module, do "sudo make load"
+
+*8)* Enjoy DTrace running on your Ubuntu server.
+
+h3. Some side notes
+
+I used Ubuntu 12.04 LTS for this setup. I ran it in Virtualbox for Linux. I forked the "dtrace4linux" repo to make this easier and to be able to base my instructions on a set point in its development. I have been able to play around with ZFS and it seems fully functional. I am not well versed in DTrace, so I can't really tell you how well it is or is not working. I was able to run some one liners just fine, however, I'm sure there are differences between the probes on Linux and the probes on a solaris-like system. If you were well versed in DTrace on solaris-like systems, then I expect that you will be able to work with and/or figure out how to make DTrace work on Linux just as well.
+
+Hopefully, with the ability to run ZFS and DTrace on Ubuntu Linux, the people who have been holding back from moving to Linux from a solaris-like operating system can be convinced to join the wonderful community surrounding Linux. I, for one, welcome the solaris converts with open arms.
+
+*- ShepBook*
+
+Further Reading and Sources:
+Thanks for Darik on Slashdot for recommending these links:
+<a href="http://zfsonlinux.com/">ZFS on Linux Homepage</a>
+<a href="https://launchpad.net/~zfs-native/+archive/stable">ZFS on Linux Launchpad</a>
+<a href="http://hub.opensolaris.org/bin/view/Community+Group+zfs/whatis">ZFS Introduction</a>
