@@ -4,13 +4,55 @@
  <title>Shepherd Book's Commonplace</title>
  <link href="http://liberumvir.com/atom.xml" rel="self"/>
  <link href="http://liberumvir.com/"/>
- <updated>2012-07-05T01:39:30-04:00</updated>
+ <updated>2012-07-05T03:22:38-04:00</updated>
  <id>http://liberumvir.com/</id>
  <author>
    <name>Jared Koumentis</name>
    <email>liberumvir@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Git with Lego Bricks - Prototype 0.01 alpha</title>
+   <link href="http://liberumvir.com/2012/07/05/lego-brick-prototype.html"/>
+   <updated>2012-07-05T00:00:00-04:00</updated>
+   <id>http://liberumvir.com/2012/07/05/lego-brick-prototype</id>
+   <content type="html">&lt;h2&gt;Git with Lego Bricks &amp;#8211; Prototype 0.01 alpha&lt;/h2&gt;
+&lt;p class=&quot;meta&quot;&gt; 05 July 2012 &amp;#8211; Jared Koumentis &lt;/p&gt;
+&lt;p&gt;Recently, I&amp;#8217;ve been contemplating what teaching Git would look like, if you used Lego Bricks. Seeing how so many people are familiar with Legos, I figure it gives a good base on which to build. (/rimshot) Here&amp;#8217;s my first prototype, version 0.01 alpha.&lt;/p&gt;
+&lt;h3&gt;Image 1: Our Git Repo.&lt;br /&gt;
+&lt;img src=&quot;http://www.liberumvir.com/images/Lego001web.png&quot; alt=&quot;Our Git repo, waiting for us to do something.&quot; /&gt;&lt;/h3&gt;
+&lt;p&gt;Here, in Image 1, we see our Git repo. On the left hand side, you can see all the different commits made so far. On the right hand side, you see out &amp;#8220;Working Directory&amp;#8221;. Right now, our Working Directory is &amp;#8220;Clean&amp;#8221;. That means that we haven&amp;#8217;t made any changes to any files there yet. Let&amp;#8217;s go ahead and change a file&amp;#8230;&lt;/p&gt;
+&lt;h3&gt;Image 2: Now, we&amp;#8217;ve changed a file.&lt;br /&gt;
+&lt;img src=&quot;http://www.liberumvir.com/images/Lego002web.png&quot; alt=&quot;We've changed a file. We'll make it red since it has changed now.&quot; /&gt;&lt;/h3&gt;
+&lt;p&gt;See how one brick in Image 2 has changed color and moved out of line of the others? That&amp;#8217;s because we&amp;#8217;ve changed the file. I&amp;#8217;m guessing that we probably added some new lines of code for some awesome feature. We say that these modified files are &amp;#8220;Unstaged&amp;#8221;. If you don&amp;#8217;t understand what I mean by &amp;#8220;Unstaged&amp;#8221;, that&amp;#8217;s ok. Just remember that word and we will see what it means soon. Right now, it&amp;#8217;s just important that you know that we call these files &amp;#8220;Unstaged&amp;#8221;.&lt;/p&gt;
+&lt;p&gt;Now, let&amp;#8217;s go ahead and add some more cool code to our files.&lt;/p&gt;
+&lt;h3&gt;Image 3: Poof. More files were changed.&lt;br /&gt;
+&lt;img src=&quot;http://www.liberumvir.com/images/Lego003web.png&quot; alt=&quot;Now we've changed three file's code, so far.&quot; /&gt;&lt;/h3&gt;
+&lt;p&gt;As you can see in Image 3, we&amp;#8217;ve added more code for our new feature to two other files. That means we&amp;#8217;ve changed three files, which you can see in the picture. I think we&amp;#8217;ve made enough changes now. Let&amp;#8217;s go ahead and use some other features of Git to save our changes. First, we will need to &amp;#8220;Stage&amp;#8221; the changes. Remember how I said to remember that the red bricks were &amp;#8220;Unstaged&amp;#8221; and that it was important. Well, now we get to see why. :)&lt;/p&gt;
+&lt;h3&gt;Image 4: Staging our files with &amp;#8220;git add&amp;#8221;.&lt;br /&gt;
+&lt;img src=&quot;http://www.liberumvir.com/images/Lego004web.png&quot; alt=&quot;Now we've staged our files in the staging area.&quot; /&gt;&lt;/h3&gt;
+&lt;p&gt;In Image 4, you will notice that our red bricks have moved and are now in their own little group. We did that by telling Git to &amp;#8220;add&amp;#8221; them. To do that, we tell Git, &amp;#8220;git add filename&amp;#8221; in our terminal. Of course, &amp;#8220;filename&amp;#8221; would be whatever the file is named! Then, they&amp;#8217;ve &amp;#8220;added&amp;#8221; to what we call the &amp;#8220;Staging Area&amp;#8221;. It&amp;#8217;s were the files go to change from &amp;#8220;Unstaged&amp;#8221; files to &amp;#8220;Staged&amp;#8221; files. You see how the bricks have all grouped together? Now we consider them &amp;#8220;Staged&amp;#8221; and they are ready to be committed. What does it mean when those Staged Files are Committed? Here&amp;#8217;s what it means.&lt;/p&gt;
+&lt;h3&gt;Image 5: Committing our files.&lt;br /&gt;
+&lt;img src=&quot;http://www.liberumvir.com/images/Lego005web.png&quot; alt=&quot;What happens when we commit files?&quot; /&gt;&lt;/h3&gt;
+&lt;p&gt;When we commit files, Git take some notes about the files. The most important thing it remembers is what has changed in the files. Git is &lt;em&gt;very&lt;/em&gt; good at remembering things, but in order to keep things organized, Git gives each commit something we call a &amp;#8220;Hash&amp;#8221;. What&amp;#8217;s a &amp;#8220;Hash&amp;#8221;? Well, I like to think of it like Hash Browns. What does Git and Hash Browns have to do with each other? Take a look!&lt;/p&gt;
+&lt;h3&gt;Image 6: Awesome Hash Brown picture by Naokomc. (She&amp;#8217;s on Flickr.)&lt;br /&gt;
+&lt;img src=&quot;http://www.liberumvir.com/images/hash_browns_by_naokomc.jpg&quot; alt=&quot;Her original picture is at http://www.flickr.com/photos/naokomc/2510656588/&quot; /&gt;&lt;/h3&gt;
+&lt;p&gt;Here&amp;#8217;s a picture of some Hash Browns, just in case you forgot what they look like. :) Have you ever noticed how no two serving of Hash Browns are the same? All the little strings of tasty potato goodness get all tangled up into a very unique pattern. Well, Git Hashes are kinda like Hash Browns. They are unique and no two are the same. For Git, this is important. You see, Git uses these Hashes in order to remember each of the commits. If they weren&amp;#8217;t unique, Git would become confused! Now, let&amp;#8217;s see what happens when you make a commit. Back to the bricks! (I hope I didn&amp;#8217;t make you too hungry!)&lt;/p&gt;
+&lt;h3&gt;Image 7: We&amp;#8217;ve made a commit with &amp;#8220;git commit&amp;#8221;.&lt;br /&gt;
+&lt;img src=&quot;http://www.liberumvir.com/images/Lego006web.png&quot; alt=&quot;Our commit is complete! But what about the Hashes?&quot; /&gt;&lt;/h3&gt;
+&lt;p&gt;Ok, so, in Image 7 we see that our commit is complete and has been added in line with all the other commits. We did this by telling Git, &amp;#8220;git commit -m &amp;#8216;adding our new code&amp;#8217;&amp;#8221;. What that does is tell Git to commit the code and save the changes. (I like to think of it as telling Git to &amp;#8220;Commit this to memory!&amp;#8221;) We also have Git take down a message to keep with the code when it commits it. That&amp;#8217;s what the &amp;#8220;-m &amp;#8216;adding our new code&amp;#8217;&amp;#8221; part is. The &amp;#8220;-m&amp;#8221; tell Git that we are getting ready to give it a message, and then we tell Git our message by putting it in quotes. You can use &amp;#8216;single quotes&amp;#8217; or &amp;#8220;double quotes&amp;#8221;. (That&amp;#8217;s all up to you.) Now, Git will remember our code changes and our little message, for later.&lt;/p&gt;
+&lt;p&gt;So, what happened with that whole Hashes business? What was that all about?&lt;/p&gt;
+&lt;p&gt;Well, you see, when Git commits our changes it attaches the Hash to the committed code. Git does a very good job at keeping things organized and tidy. It&amp;#8217;s very efficient at storing the code changes. (Do you see how perfectly in line all those commits are?) Now, while we see these commits as different color bricks, that&amp;#8217;s not how Git sees them. When it looks at them, it sees the Hashes. This is good, because now we could tell Git to show us what changed in any of those committed code &amp;#8220;bricks&amp;#8221; and it would know which one to look up. The Hashes actually look like big long sets of random characters. While you or I wouldn&amp;#8217;t want to remember all those characters (it looks like &amp;#8220;1bb3d21&amp;#8221; and that&amp;#8217;s the short version!) Git does a great job of remembering the Hashes and getting the ones we want when we ask for it. Of course, to make it easier on us humans, Git will also tell us the message we attached to the commit, when we ask for it.&lt;/p&gt;
+&lt;p&gt;One of the coolest things we can do with all these Commits is that we can go back in time! We can inspect each &amp;#8220;brick&amp;#8221; to see what changed! This is a really cool feature and we will learn more about it in the future. For now, just know it&amp;#8217;s a really cool ability that Git has up it&amp;#8217;s sleave.&lt;/p&gt;
+&lt;h3&gt;w00t! That&amp;#8217;s it! You&amp;#8217;re done here!&lt;/h3&gt;
+&lt;p&gt;Well, congratulations! I hope you understand the basics of a commit now. Let&amp;#8217;s recap what we went over:&lt;br /&gt;
+1) What a &amp;#8220;Working Directory&amp;#8221; is. Remember, it&amp;#8217;s where you do your work on your files!&lt;br /&gt;
+2) What a &amp;#8220;Staged&amp;#8221; or &amp;#8220;Unstaged&amp;#8221; file is and why that&amp;#8217;s important. We &amp;#8220;stage&amp;#8221; the files using the &amp;#8220;git add filename&amp;#8221; command.&lt;br /&gt;
+3) What a Commit and Hash is, in Git. We also learned that we can attach a message to our commit, to make it easier to understand our commits when we look back on them. (You know, to help our future selves!) We do all this with &amp;#8220;git commit -m &amp;#8216;our little message here&amp;#8217;&amp;#8221;&lt;/p&gt;
+&lt;p&gt;Cheers! Be back with more Git Lessons with Bricks soon!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;- ShepBook&lt;/strong&gt;&lt;/p&gt;</content>
+ </entry>
  
  <entry>
    <title>ZFS and DTrace running on Ubuntu Linux</title>

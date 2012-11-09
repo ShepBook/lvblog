@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+<link rel="shortcut icon" href="/favicon.ico">
+  <meta http-equiv="content-type" context="text/html"; charset=utf-8" />
+  <title>Git with Lego Bricks - Prototype 0.01 alpha</title>
+  <meta name="author" content="Jared Koumentis" />
+    
+  <!-- Homepage CSS -->
+  <link rel="stylesheet" href="/css/mainpage.css" type="text/css" />
+  
+  <!-- Google Analytics -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-30344765-1']);
+  _gaq.push(['_setDomainName', 'liberumvir.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+
+<div class="site">
+  <div class="title">
+    <a href="/">Shepherd Book's Commonplace</a>
+    <a class="extra" href="/">Home</a>
+  </div>
+  
+  <div id="post">
+<h2>Git with Lego Bricks &#8211; Prototype 0.01 alpha</h2>
+<p class="meta"> 05 July 2012 &#8211; Jared Koumentis </p>
+<p>Recently, I&#8217;ve been contemplating what teaching Git would look like, if you used Lego Bricks. Seeing how so many people are familiar with Legos, I figure it gives a good base on which to build. (/rimshot) Here&#8217;s my first prototype, version 0.01 alpha.</p>
+<h3>Image 1: Our Git Repo.<br />
+<img src="http://www.liberumvir.com/images/Lego001web.png" alt="Our Git repo, waiting for us to do something." /></h3>
+<p>Here, in Image 1, we see our Git repo. On the left hand side, you can see all the different commits made so far. On the right hand side, you see out &#8220;Working Directory&#8221;. Right now, our Working Directory is &#8220;Clean&#8221;. That means that we haven&#8217;t made any changes to any files there yet. Let&#8217;s go ahead and change a file&#8230;</p>
+<h3>Image 2: Now, we&#8217;ve changed a file.<br />
+<img src="http://www.liberumvir.com/images/Lego002web.png" alt="We've changed a file. We'll make it red since it has changed now." /></h3>
+<p>See how one brick in Image 2 has changed color and moved out of line of the others? That&#8217;s because we&#8217;ve changed the file. I&#8217;m guessing that we probably added some new lines of code for some awesome feature. We say that these modified files are &#8220;Unstaged&#8221;. If you don&#8217;t understand what I mean by &#8220;Unstaged&#8221;, that&#8217;s ok. Just remember that word and we will see what it means soon. Right now, it&#8217;s just important that you know that we call these files &#8220;Unstaged&#8221;.</p>
+<p>Now, let&#8217;s go ahead and add some more cool code to our files.</p>
+<h3>Image 3: Poof. More files were changed.<br />
+<img src="http://www.liberumvir.com/images/Lego003web.png" alt="Now we've changed three file's code, so far." /></h3>
+<p>As you can see in Image 3, we&#8217;ve added more code for our new feature to two other files. That means we&#8217;ve changed three files, which you can see in the picture. I think we&#8217;ve made enough changes now. Let&#8217;s go ahead and use some other features of Git to save our changes. First, we will need to &#8220;Stage&#8221; the changes. Remember how I said to remember that the red bricks were &#8220;Unstaged&#8221; and that it was important. Well, now we get to see why. :)</p>
+<h3>Image 4: Staging our files with &#8220;git add&#8221;.<br />
+<img src="http://www.liberumvir.com/images/Lego004web.png" alt="Now we've staged our files in the staging area." /></h3>
+<p>In Image 4, you will notice that our red bricks have moved and are now in their own little group. We did that by telling Git to &#8220;add&#8221; them. To do that, we tell Git, &#8220;git add filename&#8221; in our terminal. Of course, &#8220;filename&#8221; would be whatever the file is named! Then, they&#8217;ve &#8220;added&#8221; to what we call the &#8220;Staging Area&#8221;. It&#8217;s were the files go to change from &#8220;Unstaged&#8221; files to &#8220;Staged&#8221; files. You see how the bricks have all grouped together? Now we consider them &#8220;Staged&#8221; and they are ready to be committed. What does it mean when those Staged Files are Committed? Here&#8217;s what it means.</p>
+<h3>Image 5: Committing our files.<br />
+<img src="http://www.liberumvir.com/images/Lego005web.png" alt="What happens when we commit files?" /></h3>
+<p>When we commit files, Git take some notes about the files. The most important thing it remembers is what has changed in the files. Git is <em>very</em> good at remembering things, but in order to keep things organized, Git gives each commit something we call a &#8220;Hash&#8221;. What&#8217;s a &#8220;Hash&#8221;? Well, I like to think of it like Hash Browns. What does Git and Hash Browns have to do with each other? Take a look!</p>
+<h3>Image 6: Awesome Hash Brown picture by Naokomc. (She&#8217;s on Flickr.)<br />
+<img src="http://www.liberumvir.com/images/hash_browns_by_naokomc.jpg" alt="Her original picture is at http://www.flickr.com/photos/naokomc/2510656588/" /></h3>
+<p>Here&#8217;s a picture of some Hash Browns, just in case you forgot what they look like. :) Have you ever noticed how no two serving of Hash Browns are the same? All the little strings of tasty potato goodness get all tangled up into a very unique pattern. Well, Git Hashes are kinda like Hash Browns. They are unique and no two are the same. For Git, this is important. You see, Git uses these Hashes in order to remember each of the commits. If they weren&#8217;t unique, Git would become confused! Now, let&#8217;s see what happens when you make a commit. Back to the bricks! (I hope I didn&#8217;t make you too hungry!)</p>
+<h3>Image 7: We&#8217;ve made a commit with &#8220;git commit&#8221;.<br />
+<img src="http://www.liberumvir.com/images/Lego006web.png" alt="Our commit is complete! But what about the Hashes?" /></h3>
+<p>Ok, so, in Image 7 we see that our commit is complete and has been added in line with all the other commits. We did this by telling Git, &#8220;git commit -m &#8216;adding our new code&#8217;&#8221;. What that does is tell Git to commit the code and save the changes. (I like to think of it as telling Git to &#8220;Commit this to memory!&#8221;) We also have Git take down a message to keep with the code when it commits it. That&#8217;s what the &#8220;-m &#8216;adding our new code&#8217;&#8221; part is. The &#8220;-m&#8221; tell Git that we are getting ready to give it a message, and then we tell Git our message by putting it in quotes. You can use &#8216;single quotes&#8217; or &#8220;double quotes&#8221;. (That&#8217;s all up to you.) Now, Git will remember our code changes and our little message, for later.</p>
+<p>So, what happened with that whole Hashes business? What was that all about?</p>
+<p>Well, you see, when Git commits our changes it attaches the Hash to the committed code. Git does a very good job at keeping things organized and tidy. It&#8217;s very efficient at storing the code changes. (Do you see how perfectly in line all those commits are?) Now, while we see these commits as different color bricks, that&#8217;s not how Git sees them. When it looks at them, it sees the Hashes. This is good, because now we could tell Git to show us what changed in any of those committed code &#8220;bricks&#8221; and it would know which one to look up. The Hashes actually look like big long sets of random characters. While you or I wouldn&#8217;t want to remember all those characters (it looks like &#8220;1bb3d21&#8221; and that&#8217;s the short version!) Git does a great job of remembering the Hashes and getting the ones we want when we ask for it. Of course, to make it easier on us humans, Git will also tell us the message we attached to the commit, when we ask for it.</p>
+<p>One of the coolest things we can do with all these Commits is that we can go back in time! We can inspect each &#8220;brick&#8221; to see what changed! This is a really cool feature and we will learn more about it in the future. For now, just know it&#8217;s a really cool ability that Git has up it&#8217;s sleave.</p>
+<h3>w00t! That&#8217;s it! You&#8217;re done here!</h3>
+<p>Well, congratulations! I hope you understand the basics of a commit now. Let&#8217;s recap what we went over:<br />
+1) What a &#8220;Working Directory&#8221; is. Remember, it&#8217;s where you do your work on your files!<br />
+2) What a &#8220;Staged&#8221; or &#8220;Unstaged&#8221; file is and why that&#8217;s important. We &#8220;stage&#8221; the files using the &#8220;git add filename&#8221; command.<br />
+3) What a Commit and Hash is, in Git. We also learned that we can attach a message to our commit, to make it easier to understand our commits when we look back on them. (You know, to help our future selves!) We do all this with &#8220;git commit -m &#8216;our little message here&#8217;&#8221;</p>
+<p>Cheers! Be back with more Git Lessons with Bricks soon!</p>
+<p><strong>- ShepBook</strong></p>
+</div>
+
+<div id="related">
+  <h4>Other Posts</h4>
+  <ul class="posts">
+    
+      <li><span>01 Jun 2012</span> &raquo; <a href="/2012/06/01/zfs-and-dtrace-running-on-ubuntu.html">ZFS and DTrace running on Ubuntu Linux</a></li>
+    
+      <li><span>13 May 2012</span> &raquo; <a href="/2012/05/13/theory-of-productive-spaces.html">A Theory of Productive Spaces</a></li>
+    
+      <li><span>22 Apr 2012</span> &raquo; <a href="/2012/04/22/your-text-editor-makes-a-difference.html">Your Text Editor Makes a Difference</a></li>
+    
+  </ul>
+</div>
+
+  
+  <div class="footer">
+    <div class="contact">
+      <p>
+        Jared Koumentis | <a href="http://feeds.feedburner.com/shepbookscommonplace">RSS Feed</a> <br />
+        Author of <a href="http://www.liberumvir.com/">this blog</a> and <a href="http://www.thenoteplace.com/" target="_blank">TheNotePlace.com</a>
+      </p>
+    </div>
+    <div class="contact">
+      <p>
+        <a href="http://github.com/ShepBook/" target="_blank">Fork me on GitHub @ShepBook</a><br />
+        <a href="http://twitter.com/shepbook/" target="_blank">Follow me on Twitter @ShepBook</a><br />
+      </p>
+    </div>
+  </div>
+</div>
+
+<a href="http://github.com/ShepBook" target="_blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+</body>
+</html>
